@@ -1,11 +1,11 @@
-package br.com.appweb.service;
+package br.com.appweb.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class ConectorBanco {
+public class ConectarDAO {
 
 	private Connection connection = null;
 	private Statement statement = null;

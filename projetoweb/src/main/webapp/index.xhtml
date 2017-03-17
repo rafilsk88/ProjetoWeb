@@ -15,21 +15,21 @@
 		<h:panelGrid>
 			<!-- Usando JSF -->
 			<h:outputLabel value="Usuario:" />
-			<h:inputText value="" />
+			<h:inputText value="#{login.usuario}" />
 			<h:outputLabel value="Senha:" />
-			<h:inputSecret value="" />
-			<h:commandButton value="Entrar" />
+			<h:inputSecret value="#{login.senha}" />
+			<h:commandButton value="Entrar" action="#{login.LoginController()}"  />
 
 			<hr/>
 
 			<!-- Usuando Primefaces -->
 			<p:panelGrid  columns="2" >
 				<p:outputLabel value="Novo Usuario:" />
-				<p:inputText />
+				<p:inputText value="usuario"/>
 				<p:outputLabel value="Cadastro da senha:" />
-				<p:inputText />
+				<p:inputText value="senha"/>
 				<br/>
-				<p:commandButton value="Salvar" />
+				<p:commandButton value="Salvar"  />
 			</p:panelGrid>
 		</h:panelGrid>
 	</h:form>
