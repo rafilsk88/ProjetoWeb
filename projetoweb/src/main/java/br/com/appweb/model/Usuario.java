@@ -1,5 +1,7 @@
 package br.com.appweb.model;
 
+
+
 public class Usuario {
 	
 	private int id;

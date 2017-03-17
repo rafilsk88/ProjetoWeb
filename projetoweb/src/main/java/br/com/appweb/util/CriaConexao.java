@@ -2,20 +2,11 @@ package br.com.appweb.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.swing.JOptionPane;
 
-import com.mysql.jdbc.PreparedStatement;
 
-import br.com.appweb.controller.ErroSistema;
-import br.com.appweb.model.Usuario;
-
-
-public class ConexaoDAO {
+public class CriaConexao {
 
 	private static Connection conexao;
 	private static final String URL_CONEXAO = "jdbc:nysql://localhost:3306/projetoweb";
@@ -26,7 +17,7 @@ public class ConexaoDAO {
 		if(conexao == null){
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				conexao = DriverManager.getConnection(null);
+				conexao = DriverManager.getConnection(URL_CONEXAO, USUARIO, SENHA);
 			} catch (Exception e) {
 				JOptionPane.showConfirmDialog(null, "Erro a URL nao encontrada.");
 			}
