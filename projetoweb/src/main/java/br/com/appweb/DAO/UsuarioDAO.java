@@ -15,7 +15,7 @@ public class UsuarioDAO {
 		
 		try {
 			Connection conexao = CriaConexao.getConexao(); 
-			PreparedStatement ps = (PreparedStatement) conexao.prepareCall("INSERT INTO `login` ('usuario', 'senha') VALUES (?,?) ");
+			PreparedStatement ps = (PreparedStatement) conexao.prepareCall("INSERT INTO login (usuario, senha) VALUES (?,?) ");
 			ps.setString(1, usuario.getNome());
 			ps.setString(2, usuario.getSenha());
 			ps.execute();
